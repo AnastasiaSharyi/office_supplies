@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<views xmlns="http://schemas.haulmont.com/cuba/view.xsd">
+
+    <view entity="untitled9_Products" name="products-with-category_of_poducts" extends="_local">
+        <property name="category_of_products" view="_minimal"/>
+    </view>
+    <view entity="untitled9_Employee" name="employee-with-products" extends="_local">
+        <property name="category_of_products" view="_minimal"/>
+        <property name="products" view="_minimal"/>
+    </view>
+</views>

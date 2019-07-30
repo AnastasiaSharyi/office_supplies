@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="untitled9" transaction-type="RESOURCE_LOCAL">
+
+        <class>com.company.untitled9.entity.Category_of_products</class>
+        <class>com.company.untitled9.entity.Products</class>
+        <class>com.company.untitled9.entity.Employee</class>
+    </persistence-unit>
+</persistence>

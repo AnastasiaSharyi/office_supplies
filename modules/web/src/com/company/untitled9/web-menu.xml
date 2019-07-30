@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<menu-config xmlns="http://schemas.haulmont.com/cuba/menu.xsd">
+    <menu id="application-untitled9" insertBefore="administration">
+        <item screen="untitled9_Category_of_products.browse"/>
+        <item screen="untitled9_Products.browse"/>
+        <item screen="untitled9_Employee.browse"/>
+        <item screen="untitled9_Statistics"/>
+    </menu>
+</menu-config>

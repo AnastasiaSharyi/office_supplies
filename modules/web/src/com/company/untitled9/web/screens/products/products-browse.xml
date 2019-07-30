@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://browseCaption"
+        focusComponent="productsesTable"
+        messagesPack="com.company.untitled9.web.screens.products">
+    <data readOnly="true">
+        <collection id="productsesDc"
+                    class="com.company.untitled9.entity.Products"
+                    view="products-with-category_of_poducts">
+            <loader id="productsesDl">
+                <query>
+                    <![CDATA[select e from untitled9_Products e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="productsesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="productsesTable"
+                dataLoader="productsesDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="productsesTable"
+                    width="100%"
+                    dataContainer="productsesDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="category_of_products"/>
+                <column id="name_of_products"/>
+                <column id="amount"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="productsesTable.create"/>
+                <button id="editBtn" action="productsesTable.edit"/>
+                <button id="removeBtn" action="productsesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
